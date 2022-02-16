@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular_Shop';
-  feature = 'recipe';
+  feature: string = 'recipe';
   onNavigate(feature: string) {
     this.feature = feature;
   }

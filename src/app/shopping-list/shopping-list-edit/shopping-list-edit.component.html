@@ -1,19 +1,21 @@
 <div class="row">
   <div class="col-xs-12">
-    <form action="">
+    <form>
       <div class="row">
         <div class="col-sm-5 form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" class="form-control" />
+          <input type="text" id="name" class="form-control" #NameRef />
         </div>
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
-          <input type="number" id="amount" class="form-control" />
+          <input type="number" id="amount" class="form-control" #AmtRef />
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button class="btn btn-success ml-2" type="submit">Add</button>
+          <button class="btn btn-success ml-2" type="button" (click)="addIng()">
+            Add
+          </button>
           <button class="btn btn-danger ml-2" type="button">Delete</button>
           <button class="btn btn-primary ml-2" type="button">Clear</button>
         </div>

@@ -4,16 +4,17 @@ import { Ingredient } from '../shared/ingredient.model';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css']
+  styleUrls: ['./shopping-list.component.css'],
 })
 export class ShoppingListComponent implements OnInit {
-  ingredients:Ingredient[]=[
+  ingredients: Ingredient[] = [
     new Ingredient('Apple', 5),
-    new Ingredient('Tomatoes',10)
-  ]
-  constructor() { }
+    new Ingredient('Tomatoes', 10),
+  ];
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onNewAdd(ingred: Ingredient) {
+    this.ingredients.push(ingred);
   }
-
 }

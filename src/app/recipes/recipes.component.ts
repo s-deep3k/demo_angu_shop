@@ -7,13 +7,8 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css'],
 })
 export class RecipesComponent implements OnInit {
-  recipe!: Recipe;
-  flag = false;
+  recipe: Recipe;
   constructor() {}
 
   ngOnInit(): void {}
-  onDetailRcv(recipe: Recipe) {
-    this.flag = true;
-    this.recipe = recipe;
-  }
 }

@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list (itemEvent)="onDetailRcv($event)"></app-recipe-list>
+    <app-recipe-list (itemEvent)="recipe = $event"></app-recipe-list>
   </div>
   <div class="col-md-7">
     <app-recipe-detail
-      *ngIf="flag; else noDetail"
+      *ngIf="recipe; else noDetail"
       [recipeEl]="recipe"
     ></app-recipe-detail>
     <ng-template #noDetail>
