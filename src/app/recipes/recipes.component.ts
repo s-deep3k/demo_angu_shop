@@ -13,8 +13,8 @@ export class RecipesComponent implements OnInit {
   constructor(private recService: RecipeService) {}
 
   ngOnInit(): void {
-    this.recService.itemClickEvent.subscribe((r) => {
-      this.recipe = r;
-    });
+    // this.recService.itemClickEvent.subscribe((r) => {
+    //   this.recipe = r;
+    // });
   }
 }

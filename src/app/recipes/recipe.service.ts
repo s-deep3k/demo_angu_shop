@@ -3,7 +3,6 @@ import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
-  itemClickEvent = new EventEmitter<Recipe>();
   private recipes: Recipe[] = [
     new Recipe(
       'Sticky Tofu',
@@ -20,5 +19,8 @@ export class RecipeService {
   ];
   getRecipes() {
     return this.recipes.slice();
+  }
+  getRecipeById(index: number) {
+    return this.recipes[index];
   }
 }
