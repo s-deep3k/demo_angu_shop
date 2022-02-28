@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Recipe List</a>
+  <a class="navbar-brand">Recipe List</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -39,8 +39,8 @@
           Manage
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item">Save Data</a>
-          <a class="dropdown-item">Fetch Data</a>
+          <a class="dropdown-item" (click)="onSave()">Save Data</a>
+          <a class="dropdown-item" (click)="onFetch()">Fetch Data</a>
         </div>
       </li>
     </ul>
