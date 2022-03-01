@@ -13,6 +13,6 @@ export class HeaderComponent {
     this.dataService.saveRecipes(this.recService.getRecipes())
   }
   onFetch(){
-    this.dataService.fetchRecipes()
+    this.dataService.fetchRecipes().subscribe()
   }
 }
