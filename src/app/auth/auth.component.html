@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <form >
+        <form (ngSubmit)="onSubmit(f)" #f>
             <div class="form-group">
                 <label for="email">E-Mail</label>
                 <input type="email" id="email" class="form-control"/>
@@ -10,8 +10,8 @@
                 <input type="password" id="password" class="form-control"/>
             </div>
             <div>
-                <button class="btn btn-primary">Sign Up</button> |
-                <button class="btn btn-primary">Switch to Login</button>
+                <button class="btn btn-primary">{{loginMode?'Login':'Sign Up'}}</button> |
+                <button class="btn btn-primary" (click)="onSwitch()">Switch to {{loginMode?'Sign Up':'Login'}}</button>
             </div>
         </form>
     </div>
