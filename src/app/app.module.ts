@@ -18,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeService } from './recipes/recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
 import {HttpClientModule} from '@angular/common/http';
-import { AuthComponent } from './auth/auth.component'
+import { AuthComponent } from './auth/auth.component';
+import { LoaderComponent } from './loader/loader.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AuthComponent } from './auth/auth.component'
     RecipeStartComponent,
     RecipeEditComponent,
     AuthComponent,
+    LoaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
   providers: [ShopListService,RecipeService,DataStorageService],
