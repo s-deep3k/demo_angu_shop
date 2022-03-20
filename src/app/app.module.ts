@@ -17,9 +17,10 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeService } from './recipes/recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
 import { LoaderComponent } from './loader/loader.component'
+import { AuthInterceptorService } from './shared/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { LoaderComponent } from './loader/loader.component'
     LoaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
-  providers: [ShopListService,RecipeService,DataStorageService],
+  providers: [ShopListService,RecipeService,DataStorageService,{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptorService,multi:true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
